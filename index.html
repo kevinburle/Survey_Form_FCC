@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The New York Public Library</title>
+  </head>
+  <body>
+    <header>
+      <h1 id="title">The New York Public Library</h1>
+      <p id="description">Please fill out this form correctly to borrow a book</p>
+    </header>
+    <main>
+      <form id="survey-form">
+        <fieldset>
+          <legend>About me</legend>
+          <label id="name-label">Name <input type="text" id="name" placeholder="Enter your name" required/></label>
+          <label id="email-label">Email <input type="email" id="email" placeholder="susansmith@gmail.com" required/></label>
+          <label id="number-label">Age <input type="number" id="number" min="9" max="99" placeholder="9" required/></label>
+          <label class="title" id="id-cart">Upload your identity cart <input type="file" name="identity-cart" required</label>
+          <label class="title">Payment method for collateral (5$)
+            <label><input type="radio" name="method" value="cash" class="inline"/>Cash</label>
+            <label><input type="radio" name="method" value="paypal" class="inline"/>Paypal</label>
+            <label><input type="radio" name="method" value="credit-card" class="inline"/>Credit Cart</label>
+            <label><input type="radio" name="method" value="wire-transfer" class="inline"/>Wire Transfer</label>
+          </label>
+        </fieldset>
+        <fieldset>
+          <legend>Book loan</legend>
+          <label class="title">Book condition:
+            <label><input type="radio" name="condition"  value="as-new" class="inline"/>As new</label>
+            <label><input type="radio" name="condition"  value="good" class="inline"/>Good</label>
+            <label><input type="radio" name="condition" value= "fair" class="inline"/>Fair</label>
+            <label><input type="radio" name="condition" value="poor" class="inline"/>Poor</label>
+            <label><input type="radio" name="condition" value="very-poor" class="inline"/>Very Poor</label>
+          </label>
+          <label>Borrow period
+            <select id="dropdown">
+              <option value="3">3 days</option>
+              <option value="7">1 week</option>
+              <option value="17">2 week</option>
+              <option value="21">3 week</option>
+            </select>
+          </label>
+          <label class="title">Leave us a comment if necessary
+            <textarea name="comment" rows="4" cols="30" placeholder="this book is in good condition but one page is missing..."></textarea>
+          </label>
+          <label class="title">Do you want a numeric version
+            <label><input type="radio" name="numeric-version" value="yes" class="inline" />Yes</label>
+            <label><input type="radio" name="numeric-version" value="no" class="inline" />No</label>
+          </label>
+        </fieldset>
+        <fieldset>
+          <legend>More about me</legend>
+        <label class="title">What book genre do you like (for recommandations)
+          <label><input type="checkbox" value="fantast" class="inline"/>Fantasy</label>
+          <label><input type="checkbox" value="science-fiction" class="inline"/>Science-fiction</label>
+          <label><input type="checkbox" value="action-adventure" class="inline"/>Action & Adventure</label>
+          <label><input type="checkbox" value="mystery" class="inline"/>Mystery</label>
+          <label><input type="checkbox" value="horror" class="inline"/>Horror</label>
+          <label><input type="checkbox" value="romance" class="inline"/>Romance</label>
+          <label><input type="checkbox" value="novel" class="inline"/>Novel</label>
+          <label><input type="checkbox" value="children" class="inline"/>Children's</label>
+          <label><input type="checkbox" value="food" class="inline"/>Food</label>
+        </label>
+        </fieldset>
+        <label><input type="checkbox" name="terms" value="terms" class="inline" required/> I accept the terms and conditions</label>
+        <input type="submit" value="Submit" id="submit"/>
+      </form>
+    </main>
+  </body>
+</html>
